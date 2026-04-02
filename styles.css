@@ -112,7 +112,7 @@ section {
 }
 
 /* DELAY ANIMATION */
-body {
+.second , .container , .about{
   animation-delay: 0.2s;
 }
 
@@ -159,6 +159,13 @@ footer{
   background-color: palevioletred;
   text-align: center;
   padding: 20px;
+}
+
+/*icons*/
+
+.icons{
+  width:10px;
+  height: 10px;
 }
 
 
