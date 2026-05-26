@@ -4,7 +4,7 @@ function calculatePMS() {
 
     let cycleLength= document.getElementById("cycleLength").value
 
-    let startDate= newDate(lastPeriod);
+    let startDate= newDate(lastPeriod);  
     let nextPeriod= newDate(startDate);
 
     nextPeriod.setDate(startDate.getDate()+ parseInt(cycleLength));
