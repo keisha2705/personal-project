@@ -1,26 +1,42 @@
-function calculatePMS() {
-    
-    let lastPeriod= document.getElementById("lastPeriod")
+emailjs.init({
+  publicKey: "4crrmrwa01WRw7Cz1", 
+});
 
-    let cycleLength= document.getElementById("cycleLength").value
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
 
-    let startDate= newDate(lastPeriod);  
-    let nextPeriod= newDate(startDate);
+    const serviceID = 'service_6sap9d7';
+  const templateID = 'template_42fqnbu'; 
 
-    nextPeriod.setDate(startDate.getDate()+ parseInt(cycleLength));
-    let pmsStart=newDate(nextPeriod)
-
-    pmsStart.setDate(nextPeriod.getDate()-5)
-
-    //The results of the pms data recieved//
-
-    document.getElementById("result").innerHTML
-
-    "Next Period:"+ nextPeriod.toDateString()
-
-    "<br>"
-
-    "PMS Phase Starts" + pmsStart.toDateString();
 
     
-}
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(function() {
+            alert('Sent successfully!');
+            form.reset(); 
+        })
+        .catch(function(error) {
+            alert('Failed to send... ' + JSON.stringify(error));
+        });
+});
+
+// SWIPERJS
+
+let swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false, 
+  }, 
+  pagination: { 
+    el: ".swiper-pagination", 
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next", 
+    prevEl: ".swiper-button-prev",
+  },
+});
+
