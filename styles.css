@@ -149,7 +149,7 @@ h6{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100%;
+
 
 
 }
@@ -407,11 +407,11 @@ hr{
     }
 
     .swiper-slide img {
-      display: block;
-      width: 100vw;
-      height: 100vh;
+      /* display: block; */
+      width: 90vw;
+      height: 90vh;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 20px;
     }
 
 /* MOBILE */
